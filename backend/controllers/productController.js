@@ -16,7 +16,7 @@ const getProducts = asyncHandler(async(req, res) => {
 // @access Public
 const getProductById = asyncHandler(async(req, res) => {
 
-    const products = await Product.find({})
+    const product = await Product.findById(req.params.id)
 
     if(product) {
 
