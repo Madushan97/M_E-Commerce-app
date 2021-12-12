@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken'
 import asyncHandler from 'express-async-handler'
 import User from '../models/userModel.js'
 
+// validate the token
 const protect = asyncHandler(async (req, res, next) => {
 
     let token
@@ -14,6 +15,7 @@ const protect = asyncHandler(async (req, res, next) => {
 
                 req.user = await User.findById(decoded.id).select('-password')
                 next()
+
             } catch (error) {
                 console.error(error);
                 res.status(401)
@@ -26,7 +28,6 @@ const protect = asyncHandler(async (req, res, next) => {
             res.status(401)
             throw new Error('Not authorized, No Token')
         }
-
     
 })
 

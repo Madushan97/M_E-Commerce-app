@@ -64,12 +64,12 @@ const registerUser = asyncHandler(async(req, res) => {
 
 })
 
-// @desc get user profile
-// @route POST/api/users/profile
+// @desc GET user profile
+// @route GET/api/users/profile
 // @access Private
 const getUserProfile = asyncHandler(async(req, res) => {
 
-    const user = await User.findById( req.user._id )
+    const user = await User.findById(req.user._id)
 
     if(user) {
 
