@@ -72,7 +72,7 @@ function ShippingScreen({ history }) {
 
             <Form.Group controlId='country'>
                 <Form.Label>
-                    country
+                    Country
                 </Form.Label>
                 <Form.Control 
                     type='text' 
@@ -83,7 +83,7 @@ function ShippingScreen({ history }) {
                 </Form.Control>
             </Form.Group>
 
-            <Button type='submit' variant ='primary'>
+            <Button type='submit' variant ='success'>
                 Continue
             </Button>
         </Form>
@@ -91,4 +91,4 @@ function ShippingScreen({ history }) {
     </FormContainer>
 }
 
-export default ShippingScreen
+export default ShippingScreen;
