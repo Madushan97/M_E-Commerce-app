@@ -5,7 +5,6 @@ import FormContainer from '../components/FormContainer'
 import CheckoutSteps from '../components/CheckoutSteps'
 import { savePaymentMethod } from '../actions/cartActions'
 
-
 function PaymentScreen({ history }) {
 
     const cart = useSelector(state => state.cart)
@@ -18,7 +17,6 @@ function PaymentScreen({ history }) {
 
     const [paymentMethod, setPaymentMethod] = useState('Paypal')
    
-
     const dispatch = useDispatch()
 
     const submitHandler = (e) => {
@@ -51,7 +49,7 @@ function PaymentScreen({ history }) {
 
                 </Form.Check>
 
-                {/* <Form.Check 
+                <Form.Check 
                     type='radio' 
                     label='Stripe' 
                     id='Stripe' 
@@ -59,15 +57,13 @@ function PaymentScreen({ history }) {
                     value='Stripe' 
                     onChange={(e) => setPaymentMethod(e.target.value)}>
 
-                </Form.Check> */}
-
-            
+                </Form.Check>            
 
             </Col>
 
             </Form.Group>
 
-            <Button type='submit' variant ='primary'>
+            <Button type='submit' variant ='success'>
                 Continue
             </Button>
         </Form>

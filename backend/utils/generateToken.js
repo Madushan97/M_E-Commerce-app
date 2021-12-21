@@ -8,4 +8,4 @@ const generateToken = (id) => {
     })
 }
 
-export default generateToken
+export default generateToken;
