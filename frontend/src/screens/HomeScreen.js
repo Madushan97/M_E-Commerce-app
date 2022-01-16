@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap'
-import { Helmet} from 'react-helmet'
+// import { Helmet} from 'react-helmet'
 import { useDispatch, useSelector} from 'react-redux'
 import Product from '../components/Product'
 import {listProducts} from '../actions/productActions'

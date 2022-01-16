@@ -72,7 +72,7 @@ const OrderScreen = ({ match, history }) => {
             }
         }
         
-    }, [dispatch, orderId, successPay, order, successDeliver])
+    }, [dispatch, orderId, successPay, order, successDeliver ])
 
     const successPaymentHandler = (paymentResult) => {
 
